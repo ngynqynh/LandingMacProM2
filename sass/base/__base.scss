@@ -1,0 +1,41 @@
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.box-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ct-mb {
+    display: none;
+}
+
+@include responsive("md") {
+    .box-container {
+        padding: 0 5px;
+    }
+}   
+
+@include responsive("sm") {
+    .box-container {    
+        padding: 0 10px;
+    }
+    .ct-desk {
+        display: none;
+    }
+    .ct-mb {
+        display: block;
+    }
+}
+a{
+    cursor: pointer;
+}

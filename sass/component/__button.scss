@@ -1,0 +1,55 @@
+.button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+
+    &-lg {
+        font-size: 20px;
+        padding: 9px 0;
+        width: 100%;
+        max-width: 276px;
+        @media (max-width: 1200px) {
+            padding: 5px 0;
+        }
+    }
+
+    &-sm {
+        font-size: 16px;
+        padding: 9px 0;
+        width: 100%;
+        max-width: 144px;
+        font-weight: 400;
+        @media (max-width: 1200px) {
+            padding: 7px 0;
+            max-width: 135px;
+        }
+    }
+
+    &-red {
+        background: #CB1C22;
+        border: 1px solid #CB1C22;
+        border-radius: 6px;
+    }
+
+    span {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #FFFFFF;
+        margin-top: 2px;
+    }
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+    }
+}

@@ -1,0 +1,114 @@
+.select-color {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    .item {
+        display: flex;
+        align-items: center;
+
+        span {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            position: relative;
+            $size: -2px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: $size;
+                right: $size;
+                top: $size;
+                bottom: $size;
+                border-radius: 50%;
+                border: 1px solid #cbd1d6;
+            }
+            &:after {
+                content: "\e94b";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 14px;
+                line-height: 20px;
+                color: #fff;
+                font-weight: 500;
+                display: none;
+            }
+
+            @media (max-width: 767px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #444b52;
+            margin-left: 12px;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        &.active {
+            .item__text {
+                font-weight: 500;
+            }
+            span {
+                &:before {
+                    border: 1px solid #cb1c22;
+                }
+
+                &:after {
+                    display: inline-block;
+                    color: #cb1c22;
+                }
+            }
+        }
+        &--silver {
+            span {
+                &:before {
+                    background: #edeeef;
+                    border: 1px solid #cbd1d6;
+                }
+            }
+        }
+        &--gray {
+            span {
+                &:before {
+                    background: #939ca3;
+                    border: 1px solid #cbd1d6;
+                }
+            }
+        }
+        &--yellow {
+            span {
+                &:before {
+                    background: linear-gradient(0deg, #e0b39e, #e0b39e), #000000;
+                    border: 1px solid #cbd1d6;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        gap: 12px;
+
+        .item {
+            span {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            margin-left: 4px;
+        }
+    }
+}

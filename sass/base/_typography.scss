@@ -1,0 +1,43 @@
+.typo {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    &-heading {
+        font-family: "SF Pro Display";
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 53px;
+        margin-bottom: 18px;
+    }
+    &-desc {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+    &-sub {
+        font-family: Roboto;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+        margin-bottom: 8px;
+    }
+    @include responsive(sm) {
+        &-heading {
+            font-size: 28px;
+            line-height: 33px;
+            margin-bottom: 8px;
+        }
+        &-desc {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-sub {
+            font-size: 16px;
+            line-height: 23px;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+// dinh dang cho component
